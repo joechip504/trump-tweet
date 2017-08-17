@@ -4,6 +4,13 @@
 
 ### Windows
 
+(Will set up a devbuild soon. For now...)
+From project root
+```bash
+cd .\trump-tweet-app\
+npm run build
+```
+
 Run powershell as admin.
 
 ```bash
