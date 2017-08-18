@@ -4,14 +4,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browserify-css": "^0.11.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "watchify": "^3.9.0"
   },
   "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "devbuild": " .\\node_modules\\.bin\\watchify -v --extension=.js --extension=.jsx -t [babelify --presets [ es2015 react] ] -t [browserify-css --autoInject=true] .\\src\\index.js -o public\\bundle.js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }

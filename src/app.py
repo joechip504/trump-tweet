@@ -5,7 +5,8 @@ app = Flask(__name__)
 
 # Set this stuff from environment vars?
 app_base = '/trump-tweet/'
-content_root = os.path.join(os.getcwd(), 'trump-tweet-app', 'build')
+#content_root = os.path.join(os.getcwd(), 'trump-tweet-app', 'build') # prod 
+content_root = os.path.join(os.getcwd(), 'trump-tweet-app', 'public') # devbuild
 
 @app.route(app_base + 'content/<path:filename>')
 def content(filename):
