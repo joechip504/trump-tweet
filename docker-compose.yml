@@ -1,0 +1,14 @@
+version: '3'
+services:
+    flask:
+        build: .
+        command: python ./src/app.py
+        volumes:
+            - .:/code/
+        ports:
+            - "8080:8080"
+    react:
+        build: ./trump-tweet-app
+        command: npm run devbuild
+        volumes:
+            - ./trump-tweet-app:/code/
