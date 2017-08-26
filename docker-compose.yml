@@ -12,3 +12,4 @@ services:
         command: npm run devbuild
         volumes:
             - ./trump-tweet-app:/code/
+            - /code/node_modules
