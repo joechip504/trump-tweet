@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "devbuild": " .\\node_modules\\.bin\\watchify -v --extension=.js --extension=.jsx -t [babelify --presets [ es2015 react] ] -t [browserify-css --autoInject=true] .\\src\\index.js -o public\\bundle.js",
+    "devbuild": "node_modules/.bin/watchify -v --extension=.js --extension=.jsx -t [babelify --presets [ es2015 react] ] -t [browserify-css --autoInject=true] ./src/index.js -o public/bundle.js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
